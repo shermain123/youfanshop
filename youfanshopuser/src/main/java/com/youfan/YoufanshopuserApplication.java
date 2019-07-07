@@ -1,0 +1,61 @@
+package com.youfan;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.log4j.Logger;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+
+import javax.sql.DataSource;
+
+@EnableAutoConfiguration //自动读取配置
+@SpringBootApplication
+@ComponentScan //包扫描
+@MapperScan("com.youfan.mapper")
+public class YoufanshopuserApplication {
+
+	private static Logger logger = Logger.getLogger(YoufanshopuserApplication.class);
+
+	//读取数据源配置文件 prefix="spring.datasource"读取的前缀为spring.datasource开头
+	@Bean
+	@ConfigurationProperties(prefix="spring.datasource")
+	public DataSource dataSource() {
+		//创建了一个连接池 连接池为tomcat.jdbc.pool.DataSource()
+		return new org.apache.tomcat.jdbc.pool.DataSource();
+	}
+
+	@Bean
+	public SqlSessionFactory sqlSessionFactoryBean() throws Exception {
+
+		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+		sqlSessionFactoryBean.setDataSource(dataSource());
+
+		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+
+		//读取mybatis配置文件
+		sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:/mapper/*.xml"));
+
+		return sqlSessionFactoryBean.getObject();
+	}
+
+	//事物管理
+	@Bean
+	public PlatformTransactionManager transactionManager() {
+
+		return new DataSourceTransactionManager(dataSource());
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(YoufanshopuserApplication.class, args);
+		logger.info("SpringBoot Start Success");
+	}
+
+}
