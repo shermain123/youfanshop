@@ -17,4 +17,16 @@ public class UserService {
     public User findUserInfo(){
         return userDao.findUserInfo();
     }
+
+    public int inserUserInfo(User user){
+        return userDao.inserUserInfo(user);
+    }
+
+    public int updateUser(User user){return userDao.updateUser(user);}
+
+    public User findUserById(int id){
+        return userDao.finUserById(id);
+    }
+
+
 }

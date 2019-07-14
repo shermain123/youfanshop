@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        label{display:inline-block;width:80px;}
+    </style>
+</head>
+<body>
+    <p> <label>姓名：</label>&nbsp;&nbsp;<input type="text" name="name" th:value="${user.name}" /></p>
+    <p> <label>用户名：</label>&nbsp;&nbsp;<input type="text" name="username" th:value="${user.username}" /></p>
+    <p> <label>年龄：</label>&nbsp;&nbsp;<input type="text" name="age" th:value="${user.age}" /></p>
+    <p> <label>性别：</label>&nbsp;&nbsp;<span th:value="${user.sex}"></span> </p>
+    <p> <label>QQ：  </label>&nbsp;&nbsp;<input type="text" name="qq" th:value="${user.qq}" /></p>
+    <p> <label>微信：</label>&nbsp;&nbsp;<input type="text" name="weixin" th:value="${user.weixin}" /></p>
+    <p> <label>邮箱：</label>&nbsp;&nbsp;<input type="text" name="email" th:value="${user.email}" /></p>
+    <p> <label>电话：</label>&nbsp;&nbsp;<input type="text" name="telphone"th:value="${user.telphone}" /></p>
+    <p> <label>地址：</label>&nbsp;&nbsp;<input type="text" name="address" th:value="${user.address}" /></p>
+    <p> <label>生日：</label>&nbsp;&nbsp;<input type="date" name="birthday" th:value="${user.birthday}" /></p>
+</body>
+</html>

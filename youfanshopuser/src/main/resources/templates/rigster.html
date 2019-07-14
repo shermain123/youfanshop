@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>注册页面</title>
+    <style>
+    #rigster{margin:100px auto;width:500px;height: 500px;border:1px solid blue;padding-left: 20px; }
+    label{display:inline-block;width:80px;}
+    </style>
+</head>
+<body>
+
+    <div id="rigster" >
+        <form  action="register" method="post">
+            <p> <label>姓名：</label>&nbsp;&nbsp;<input type="text" name="name" /></p>
+            <p> <label>用户名：</label>&nbsp;&nbsp;<input type="text" name="username" /></p>
+            <p> <label>密码：</label>&nbsp;&nbsp;<input type="text" name="password" /></p>
+            <p> <label>年龄：</label>&nbsp;&nbsp;<input type="text" name="age" /></p>
+            <p> <label>性别：</label>&nbsp;&nbsp;<input type="radio" name="sex" checked="true"/>男&nbsp;&nbsp; <input type="radio" name="sex" />女</p>
+            <p> <label>QQ：  </label>&nbsp;&nbsp;<input type="text" name="qq" /></p>
+            <p> <label>微信：</label>&nbsp;&nbsp;<input type="text" name="weixin" /></p>
+            <p> <label>邮箱：</label>&nbsp;&nbsp;<input type="text" name="email" /></p>
+            <p> <label>电话：</label>&nbsp;&nbsp;<input type="text" name="telphone" /></p>
+            <p> <label>地址：</label>&nbsp;&nbsp;<input type="text" name="address" /></p>
+            <p> <label>生日：</label>&nbsp;&nbsp;<input type="date" name="birthday" /></p>
+            <p><input type="submit" value="提交" /></p>
+        </form>
+    </div>
+</body>
+</html>

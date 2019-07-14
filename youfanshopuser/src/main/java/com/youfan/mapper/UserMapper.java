@@ -9,4 +9,9 @@ public interface UserMapper {
 
     public User findUserInfo();
 
+    public int inserUserInfo(User user);
+
+    public  int updateUser(User user);
+
+    public User findUserById(Integer id);
 }

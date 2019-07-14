@@ -18,4 +18,16 @@ public class UserDao {
         return userMapper.findUserInfo();
     }
 
+    public int inserUserInfo(User user){
+        return userMapper.inserUserInfo(user);
+    }
+
+    public int updateUser(User user){
+        return userMapper.updateUser(user);
+    }
+
+    public User finUserById(int id){
+        return userMapper.findUserById(id);
+    }
+
 }
