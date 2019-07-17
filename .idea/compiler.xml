@@ -13,6 +13,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="youfancommon" target="1.8" />
+      <module name="youfanproducttype" target="1.8" />
       <module name="youfanshop" target="1.5" />
       <module name="youfanshopuser" target="1.8" />
     </bytecodeTargetLevel>

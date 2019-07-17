@@ -2,12 +2,15 @@ package com.youfan.controller;
 
 import com.youfan.domain.User;
 import com.youfan.service.UserService;
+import com.youfan.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * Created by sher on 2019/7/7.
@@ -70,10 +73,22 @@ public class UserController {
     /**
      * 用户详情
      * */
-    @RequestMapping(value = "/userInfo",method = RequestMethod.GET)
-    public String userInfo(Model model,Integer id){
+    @RequestMapping(value = "/findUserById",method = RequestMethod.GET)
+    public String findUserById(Model model,Integer id){
         User user = userService.findUserById(id);
         model.addAttribute("user",user);
         return "userInfo";
+    }
+
+    @RequestMapping(value = "/queryuserbyvo",method = RequestMethod.GET)
+    public String queryuserbyvo(Model model){
+        UserVo userVo = new UserVo();
+        List<User> listuser = userService.queryuserbyvo(userVo);
+        model.addAttribute("listuser",listuser);
+        return "userlist";
+    }
+    @RequestMapping(value = "/deleteuserbyid",method = RequestMethod.GET)
+    public void deleteuserbyid(int id){
+        userService.deleteuserbyid(id);
     }
 }
