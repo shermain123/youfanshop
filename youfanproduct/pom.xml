@@ -79,6 +79,12 @@
 			<artifactId>youfancommon</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+		<!-- solr搜索引擎 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-solr</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

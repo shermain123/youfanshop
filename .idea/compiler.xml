@@ -7,18 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="youfancommon" />
+        <module name="youfanordernew" />
         <module name="youfanproduct" />
         <module name="youfanproducttypes" />
         <module name="youfanshop" />
+        <module name="youfanshopmerchant" />
         <module name="youfanshopuser" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="youfancommon" target="1.8" />
+      <module name="youfanordernew" target="1.8" />
       <module name="youfanproduct" target="1.8" />
       <module name="youfanproducttype" target="1.8" />
       <module name="youfanproducttypes" target="1.8" />
       <module name="youfanshop" target="1.5" />
+      <module name="youfanshopmerchant" target="1.8" />
       <module name="youfanshopuser" target="1.8" />
     </bytecodeTargetLevel>
   </component>

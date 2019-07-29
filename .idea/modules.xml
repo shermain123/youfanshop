@@ -3,12 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/youfancommon/youfancommon.iml" filepath="$PROJECT_DIR$/youfancommon/youfancommon.iml" />
-      <module fileurl="file://E:\ideaPro\cp03\youfanshop\youfancommon\youfancommon.iml" filepath="E:\ideaPro\cp03\youfanshop\youfancommon\youfancommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youfanordernew/youfanordernew.iml" filepath="$PROJECT_DIR$/youfanordernew/youfanordernew.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanproduct/youfanproduct.iml" filepath="$PROJECT_DIR$/youfanproduct/youfanproduct.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanproducttypes/youfanproducttypes.iml" filepath="$PROJECT_DIR$/youfanproducttypes/youfanproducttypes.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshop.iml" filepath="$PROJECT_DIR$/youfanshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/youfanshopmerchant/youfanshopmerchant.iml" filepath="$PROJECT_DIR$/youfanshopmerchant/youfanshopmerchant.iml" />
       <module fileurl="file://$PROJECT_DIR$/youfanshopuser/youfanshopuser.iml" filepath="$PROJECT_DIR$/youfanshopuser/youfanshopuser.iml" />
-      <module fileurl="file://E:\ideaPro\cp03\youfanshop\youfanshopuser\youfanshopuser.iml" filepath="E:\ideaPro\cp03\youfanshop\youfanshopuser\youfanshopuser.iml" />
     </modules>
   </component>
 </project>

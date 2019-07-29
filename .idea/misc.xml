@@ -47,6 +47,8 @@
         <option value="$PROJECT_DIR$/youfanproducttype/pom.xml" />
         <option value="$PROJECT_DIR$/youfanproduct/pom.xml" />
         <option value="$PROJECT_DIR$/youfanproducttypes/pom.xml" />
+        <option value="$PROJECT_DIR$/youfanshopmerchant/pom.xml" />
+        <option value="$PROJECT_DIR$/youfanordernew/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
